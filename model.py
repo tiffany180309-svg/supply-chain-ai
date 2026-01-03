@@ -128,7 +128,7 @@ if df_all is not None:
             st.plotly_chart(fig, use_container_width=True)
 
             # 顯示 MAPE 績效
-            st.subheader("🎯 準確率指標對照 (Accuracy Metrics)")
+            st.subheader("🎯 準確率指標對照 (Forecast Accuracy Metrics)")
             cols = st.columns(4)
             for i, m in enumerate(["SMA", "Random Forest", "Linear Regression", "ARIMA"]):
                 mape = mean_absolute_percentage_error(y_true, results[m]) * 100
